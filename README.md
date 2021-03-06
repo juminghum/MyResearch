@@ -18,7 +18,7 @@ how2sim.txt:
 
 僕が設計したプログラムを動かしたい場合
 	
-	1. chipyardをcloneする
+	1. chipyardをcloneする(git clone https://github.com/ucb-bar/chipyard)
 	
 	2. FusedDotProductフォルダを chipyard/generators/rocket-chip/src/main/scala に入れる
 	
