@@ -1,0 +1,15 @@
+how to simulate with verilator
+
+$ cd ~/project/chipyard
+$ source env.sh
+$ cd sims/verilator
+$ make debug CONFIG=xxx(e.g. FusedDotProductConfig)
+
+$ cd ~/project/bootloader_test #(in new window)
+$ make
+
+$ (cd ~/project/chipyard/sims/verilator)
+$ ./simulator-example-FusedDotProductConfig-debug +verbose -vrocc.vcd ~/project/bootloader_test/final.elf 2> debug.log
+$ vcd2wlf rocc.vcd rocc.wlf
+$ gtkwave rocc.wlf
+$ (make clean)
